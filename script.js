@@ -107,7 +107,7 @@ container.addEventListener('click', e => {
 
       // !!!!!!!!!!!!! booking offense !!!!!!!!!!!!!!!
     }
-  }, 15000)
+  }, 15 * 60)
 });
 
 // Initial seat count and total set
