@@ -10,6 +10,12 @@ let occupiedSeatsCount, selectedSeatsCount, emptySeatsCount = empty.length;
 
 populateUI();
 
+function updateSeatCount() {
+  updateSelectedCount();
+  updateOccupiedCount(); 
+  updateEmptyCount();
+}
+
 // Update Selected Seat Count
 function updateSelectedCount() {
   const selectedSeats = document.querySelectorAll('.row .seats.selected');
@@ -74,20 +80,35 @@ function populateUI() {
 }
 
 
-// Seat click event
-container.addEventListener('click', e => {
+// Seat click event function
+function toggleSeat(e) {
   if (
     e.target.classList.contains('seats') &&
     !e.target.classList.contains('occupied')
   ) {
     e.target.classList.toggle('selected');
-    updateSelectedCount();
-    updateOccupiedCount(); 
-    updateEmptyCount();
+    updateSeatCount();
   }
+}
+
+
+// Seat click event handler
+container.addEventListener('click', e => {
+  toggleSeat(e);
+
+  setTimeout(() => {
+    if (
+      e.target.classList.contains('seats') &&
+      !e.target.classList.contains('occupied') &&
+      e.target.classList.contains('selected')
+    ) {
+      e.target.classList.toggle('selected');
+      updateSeatCount();
+
+      // !!!!!!!!!!!!! booking offense !!!!!!!!!!!!!!!
+    }
+  }, 15000)
 });
 
 // Initial seat count and total set
-updateSelectedCount();
-updateOccupiedCount();
-updateEmptyCount();
+updateSeatCount();
