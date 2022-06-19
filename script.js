@@ -174,16 +174,11 @@ container.addEventListener('click', e => {
 
       // !!!!!!!!!!!!! booking offense !!!!!!!!!!!!!!!
     }
-<<<<<<< HEAD
-  }, 15 * 60 * 1000);
+    }, 15 * 60 * 1000)
+  });
 
 
   // UPDATING TABLE
-
-=======
-  }, 15 * 60 * 1000)
->>>>>>> 40b047aaec00bac389ff401612e960417bffa5a3
-});
 
 // Initial seat count and total set
 updateSeatCount();
