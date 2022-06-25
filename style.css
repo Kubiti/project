@@ -135,7 +135,8 @@ main {
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
-  margin: 0;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
 }
 
 .showcase {
@@ -166,8 +167,13 @@ main {
   height: 30px;
   width: 30px;
   margin: 5px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-radius: 10px 10px 0 0;
+  /* border-top-left-radius: 10px;
+  border-top-right-radius: 10px; */
+}
+
+.opposite .seats {
+  border-radius: 0 0 10px 10px;
 }
 
 .seats.selected {
@@ -287,7 +293,7 @@ h1 {
 
 
 footer-basic {
-  padding:40px 0;
+  padding: 1em 0;
   background-color:#ffffff;
   color:#4b4c4d;
 }
@@ -302,7 +308,7 @@ footer-basic {
 }
 
 .footer-basic li {
-  padding:0 10px;
+  padding:0 1em;
 }
 
 .footer-basic ul a {
