@@ -162,25 +162,27 @@ main {
   margin: 0.1em 0.5em 0.1em 0.2em;
 }
 
-.seats {
+/* div[class^=seat] {
+  border: 5px solid blue;
+} */
+
+[class^=seat] {
   background-color: #444451;
   height: 30px;
   width: 30px;
   margin: 5px;
   border-radius: 10px 10px 0 0;
-  /* border-top-left-radius: 10px;
-  border-top-right-radius: 10px; */
 }
 
 .opposite .seats {
   border-radius: 0 0 10px 10px;
 }
 
-.seats.selected {
+[class^=seat].selected {
   background-color: #6feaf6;
 }
 
-.seats.occupied {
+[class^=seat].occupied {
   background-color: #fff;
 }
 

@@ -1,4 +1,6 @@
 const container = document.querySelector('.container');
+const chair_count = document.querySelectorAll('.seats');
+const chairs = document.getElementById('chairs')
 const selected = document.querySelectorAll('.row .seats:not(.occupied)');
 const occupied = document.querySelectorAll('.row .seats:not(.selected)');
 const empty = document.querySelectorAll('.row .seats:not(.selected, .occupied)')
@@ -18,6 +20,8 @@ function updateSeatCount() {
   updateOccupiedCount(); 
   updateEmptyCount();
   updateTable();
+  chairs.textContent = chair_count.length;
+
 }
 
 // Update Selected Seat Count
